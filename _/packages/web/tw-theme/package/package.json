@@ -1,0 +1,82 @@
+{
+    "name": "@repo/tw-theme",
+    "private": true,
+    "type": "module",
+    "version": "0.0.0",
+    "scripts": {
+        "build": "pnpm with-env tsup",
+        "build:types": "pnpm with-env tsc -p . --emitDeclarationOnly --declaration --noEmit false",
+        "build:deps": "pnpm with-env tsup",
+        "build:packages": "pnpm with-env tsup",
+        "dev": "pnpm with-env tsup --watch ",
+        "dev:deps": "pnpm with-env tsup -d --watch",
+        "dev:packages": "pnpm with-env tsup -d --watch",
+        "clean": "rm -rf .turbo node_modules dist",
+        "lint": "eslint .",
+        "typecheck": "tsc -p . --emitDeclarationOnly --declaration --noEmit false",
+        "prettie:format": "prettier --check \"**/*.{mjs,ts,md,json}\"",
+        "with-env": "dotenv -e .env -- "
+    },
+    "exports": {
+        "./@client": {
+            "types": "./dist/src/@client/index.d.ts",
+            "import": "./dist/src/@client/index.js",
+            "require": "./dist/src/@client/index.cjs"
+        },
+        "./config": {
+            "types": "./dist/src/config/index.d.ts",
+            "import": "./dist/src/config/index.js",
+            "require": "./dist/src/config/index.cjs"
+        },
+        "./vars": {
+            "types": "./dist/src/vars/index.d.ts",
+            "import": "./dist/src/vars/index.js",
+            "require": "./dist/src/vars/index.cjs"
+        },
+        "./utils": {
+            "types": "./dist/src/utils/index.d.ts",
+            "import": "./dist/src/utils/index.js",
+            "require": "./dist/src/utils/index.cjs"
+        }
+    },
+    "dependencies": {
+        "@repo/ts-local-storage": "workspace:*",
+        "@repo/ts-utils": "workspace:*",
+        "@repo/ts-vars": "workspace:*",
+        "jotai": "^2.7.0",
+        "react": "^18.2.0",
+        "react-dom": "^18.2.0",
+        "zod": "^3.22.4"
+    },
+    "peerDependencies": {
+        "jotai": "^2.7.0",
+        "react": "^18.2.0",
+        "react-dom": "^18.2.0",
+        "zod": "^3.22.4"
+    },
+    "devDependencies": {
+        "@repo/eslint-config": "workspace:*",
+        "@repo/prettier-config": "workspace:*",
+        "@repo/tailwind-config": "workspace:*",
+        "@repo/tsconfig": "workspace:*",
+        "@repo/tsup-config": "workspace:*",
+        "@types/node": "^20.11.25",
+        "@types/react": "^18.2.64",
+        "@types/react-dom": "^18.2.21",
+        "dotenv-cli": "^7.4.0",
+        "eslint": "^8.57.0",
+        "prettier": "^3.2.5",
+        "tailwindcss": "^3.4.1",
+        "tsup": "^8.0.2",
+        "tsx": "^4.7.1",
+        "type-fest": "^4.12.0",
+        "typescript": "^5.4.2"
+    },
+    "eslintConfig": {
+        "root": true,
+        "extends": [
+            "@repo/eslint-config/library"
+        ]
+    },
+    "prettier": "@repo/prettier-config"
+}

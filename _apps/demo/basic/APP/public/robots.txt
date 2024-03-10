@@ -1,0 +1,19 @@
+# *
+User-agent: *
+Disallow: /admin*
+Disallow: /cms*
+Disallow: /api*
+Disallow: /not-found
+Disallow: /page-not-found
+Disallow: /test*
+
+# *
+User-agent: *
+Allow: 
+
+# Host
+Host: https://your-app.vercel.app
+
+# Sitemaps
+Sitemap: https://your-app.vercel.app/sitemap.xml
+Sitemap: https://your-app.vercel.app/server-sitemap.xml

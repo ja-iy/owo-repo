@@ -1,0 +1,1 @@
+export type LiteralOrString<T extends string> = T | (string & {})

@@ -1,0 +1,32 @@
+// DO NOT MANUALLY EDIT THIS FILE. IT IS GENERATED  & OVERWRITTEN BY [ pnpm theme ]
+
+{{#each twConfig.presetImportLines}}
+{{{ this }}}
+{{/each}} 
+
+/** @type {import('tailwindcss').Config} */
+export const TW_CONFIG__{{{theme.id}}} = {
+    content: [ ],
+
+    theme: {
+        extend: {
+            colors: { 
+                {{#each twConfig.colorLines}}{{{ this }}}
+                {{/each}} 
+            },
+            fontFamily: { 
+                {{#each twConfig.fontLines}}{{{ this }}}
+                {{/each}} 
+            },
+        }
+    },
+
+    presets: [
+        {{#each twConfig.presetLines}}
+        {{{ this }}}
+        {{/each}} 
+    ]
+};
+
+
+export default TW_CONFIG__{{{theme.id}}}

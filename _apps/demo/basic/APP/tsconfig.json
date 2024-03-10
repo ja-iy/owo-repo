@@ -1,0 +1,22 @@
+{
+    "extends": "@repo/tsconfig/app/next.json",
+    "compilerOptions": {
+        "rootDir": ".",
+        "baseUrl": ".",
+        "paths": {
+            "@app-legacy/*": [ "./src/app/(app)/_files/_legacy/*" ],
+            "@site/*": [ "./src/app/(app)/(site)/*" ],
+            "@app/*": [ "./src/app/(app)/*" ],
+            "@/*": [ "./src/*" ],
+            "~/*": [ "./*" ]
+        },
+        "incremental": true,
+        "plugins": [
+            {
+                "name": "next"
+            }
+        ]
+    },
+    "include": [ ".", "global.d.ts", "next-env.d.ts", ".next/types/**/*.ts" ],
+    "exclude": [ "node_modules", "dist" ]
+}

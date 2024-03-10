@@ -1,0 +1,40 @@
+/** @typedef  {import("prettier").Config} PrettierConfig */
+/** @typedef {import("prettier-plugin-tailwindcss").PluginOptions} TailwindConfig */
+/** @typedef  {import("@ianvs/prettier-plugin-sort-imports").PluginConfig} SortImportsConfig */
+
+/** @type { PrettierConfig | SortImportsConfig | TailwindConfig } */
+const config = {
+
+    tabWidth: 4,
+    semi: false,
+    useTabs: true,
+
+
+    plugins: [
+        "@ianvs/prettier-plugin-sort-imports",
+    ],
+
+    //   tailwindConfig: fileURLToPath(
+    //     new URL("./tailwind.config.ts", import.meta.url),
+    //   ),
+
+    importOrder: [
+        "^(react/(.*)$)|^(react$)|^(react-native(.*)$)",
+        "^(next/(.*)$)|^(next$)",
+        "^(expo(.*)$)|^(expo$)",
+        "<THIRD_PARTY_MODULES>",
+        "",
+        "^@repo/(.*)$",
+        "",
+        "^~/",
+        "^@/",
+        "^[../]",
+        "^[./]",
+    ],
+
+    importOrderParserPlugins: ["typescript", "jsx", "decorators-legacy"],
+
+    importOrderTypeScriptVersion: "4.4.0",
+};
+
+export default config;

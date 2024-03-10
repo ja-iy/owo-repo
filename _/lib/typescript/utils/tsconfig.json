@@ -1,0 +1,14 @@
+{
+    "extends": "@repo/tsconfig/lib/built/base.json",
+    "include": [ "." ],
+    "exclude": [ "node_modules", "dist" ],
+    "compilerOptions": {
+        "rootDir": ".",
+        "outDir": "dist",
+        "baseUrl": ".",
+        "paths": {
+            "@/*": [ "./src/*" ],
+            "~/*": [ "./*" ]
+        }
+    }
+}

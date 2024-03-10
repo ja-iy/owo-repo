@@ -1,0 +1,42 @@
+{
+    "name": "@env/vercel",
+    "private": true,
+    "type": "module",
+    "version": "0.0.0",
+    "license": "MIT",
+    "scripts": {
+        "clean": "rm -rf .turbo node_modules",
+        "lint": "eslint .",
+        "prettie:format": "prettier --check \"**/*.{mjs,ts,md,json}\"",
+        "typecheck": "tsc --noEmit"
+    },
+    "exports": {
+        ".": {
+            "types": "./envs.d.ts",
+            "import": "./envs.cjs",
+            "require": "./envs.cjs"
+        }
+    },
+    "peerDependencies": {
+        "@repo/ts-env": "workspace:*",
+        "zod": "^3.22.4"
+    },
+    "devDependencies": {
+        "@repo/eslint-config": "workspace:*",
+        "@repo/prettier-config": "workspace:*",
+        "@repo/ts-env": "workspace:*",
+        "@repo/tsconfig": "workspace:*",
+        "@types/node": "^20.11.25",
+        "eslint": "^8.57.0",
+        "prettier": "^3.2.5",
+        "typescript": "^5.4.2",
+        "zod": "^3.22.4"
+    },
+    "eslintConfig": {
+        "root": true,
+        "extends": [
+            "@repo/eslint-config/library"
+        ]
+    },
+    "prettier": "@repo/prettier-config"
+}

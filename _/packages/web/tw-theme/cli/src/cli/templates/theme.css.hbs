@@ -1,0 +1,22 @@
+{{#each themeCss.importLines}}
+{{{ this }}}
+{{/each}} 
+
+/*  DO NOT MANUALLY EDIT THIS FILE. IT IS GENERATED FROM [ pnpm theme ] */
+
+:root {
+    {{#each themeCss.cssVarLinesLight}}{{{ this }}}
+    {{/each}} 
+
+    {{#each themeCss.cssValueLinesLight}}{{{ this }}}
+    {{/each}} 
+
+    {{#each themeCss.cssValueLinesDark}}{{{ this }}}
+    {{/each}} 
+}
+
+
+.dark {
+    {{#each themeCss.cssVarLinesDark}}{{{ this }}}
+    {{/each}}
+}

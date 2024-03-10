@@ -1,0 +1,90 @@
+{
+    "name": "@repo/ts-utils",
+    "private": true,
+    "type": "module",
+    "version": "0.0.0",
+    "license": "MIT",
+    "scripts": {
+        "build": "tsup",
+        "build:libs": "tsup",
+        "build:packages": "tsup",
+        "dev": "tsup --watch",
+        "clean": "rm -rf .turbo node_modules",
+        "prettie:format": "prettier --check \"**/*.{mjs,ts,md,json}\"",
+        "lint": "eslint .",
+        "typecheck": "tsc --noEmit"
+    },
+    "exports": {
+        ".": null,
+        "./http": {
+            "types": "./dist/src/http/index.d.ts",
+            "import": "./dist/src/http/index.js",
+            "require": "./dist/src/http/index.cjs"
+        },
+        "./message": {
+            "types": "./dist/src/message/index.d.ts",
+            "import": "./dist/src/message/index.js",
+            "require": "./dist/src/message/index.cjs"
+        },
+        "./number": {
+            "types": "./dist/src/number/index.d.ts",
+            "import": "./dist/src/number/index.js",
+            "require": "./dist/src/number/index.cjs"
+        },
+        "./string": {
+            "types": "./dist/src/string/index.d.ts",
+            "import": "./dist/src/string/index.js",
+            "require": "./dist/src/string/index.cjs"
+        },
+        "./types": {
+            "types": "./dist/src/types/index.d.ts",
+            "import": "./dist/src/types/index.js",
+            "require": "./dist/src/types/index.cjs"
+        },
+        "./object": {
+            "types": "./dist/src/object/index.d.ts",
+            "import": "./dist/src/object/index.js",
+            "require": "./dist/src/object/index.cjs"
+        },
+        "./validation": {
+            "types": "./dist/src/validation/index.d.ts",
+            "import": "./dist/src/validation/index.js",
+            "require": "./dist/src/validation/index.cjs"
+        },
+        "./@client/css": {
+            "types": "./dist/src/@client/css/index.d.ts",
+            "import": "./dist/src/@client/css/index.js",
+            "require": "./dist/src/@client/css/index.cjs"
+        },
+        "./@client/navigator": {
+            "types": "./dist/src/@client/navigator/index.d.ts",
+            "import": "./dist/src/@client/navigator/index.js",
+            "require": "./dist/src/@client/navigator/index.cjs"
+        }
+    },
+    "dependencies": {
+        "zod": "^3.22.4"
+    },
+    "peerDependencies": {
+        "zod": "^3.22.4"
+    },
+    "devDependencies": {
+        "@repo/eslint-config": "workspace:*",
+        "@repo/prettier-config": "workspace:*",
+        "@repo/tsconfig": "workspace:*",
+        "@repo/tsup-config": "workspace:*",
+        "dotenv-cli": "^7.4.0",
+        "eslint": "^8.57.0",
+        "prettier": "^3.2.5",
+        "tsup": "^8.0.2",
+        "type-fest": "^4.12.0",
+        "typescript": "^5.4.2"
+    },
+    "eslintConfig": {
+        "root": true,
+        "extends": [
+            "@repo/eslint-config/library"
+        ]
+    },
+    "prettier": "@repo/prettier-config"
+}

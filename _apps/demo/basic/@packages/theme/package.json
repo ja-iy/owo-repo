@@ -1,0 +1,65 @@
+{
+    "name": "@demo/basic-theme",
+    "private": true,
+    "type": "module",
+    "version": "0.0.0",
+    "scripts": {
+        "clean": "rm -rf .turbo node_modules dist",
+        "lint": "eslint .",
+        "typecheck": "tsc --noEmit",
+        "prettie:format": "prettier --check \"**/*.{mjs,ts,md,json}\"",
+        "with-env": "dotenv -e ../../.env -- "
+    },
+    "exports": {
+        ".": null,
+        "./@gen/@client/hooks": "./@gen/tw-theme/@client/hooks/index.ts",
+        "./@gen/@client/utils": "./@gen/tw-theme/@client/utils/index.ts",
+        "./@gen/@client/components": "./@gen/tw-theme/@client/components/index.ts",
+        "./@gen/@client/init": "./@gen/tw-theme/@client/init/index.tsx",
+        "./@gen/theme.css": "./@gen/tw-theme/theme.css",
+        "./@gen/tailwind-config": "./@gen/tw-theme/tailwind.config.ts",
+        "./@gen/theme": "./@gen/tw-theme/GEN_THEME.ts",
+        "./@gen/blocking-dark-mode-init": "./@gen/tw-theme/BlockingDarkModeInit.@S.tsx",
+        "./tailwind-config": "./@config/tailwind.config.ts",
+        "./@config/theme.css": "./@config/theme.css"
+    },
+    "dependencies": {
+        "@repo-theme/radix": "workspace:*",
+        "@repo-theme/shadcn": "workspace:*",
+        "@repo/next-utils": "workspace:*",
+        "@repo/ts-utils": "workspace:*",
+        "@repo/ts-vars": "workspace:*",
+        "@repo/tw-theme": "workspace:*",
+        "react": "^18.2.0",
+        "react-dom": "^18.2.0",
+        "zod": "^3.22.4"
+    },
+    "peerDependencies": {
+        "react": "^18.2.0",
+        "react-dom": "^18.2.0",
+        "zod": "^3.22.4"
+    },
+    "devDependencies": {
+        "@repo/eslint-config": "workspace:*",
+        "@repo/prettier-config": "workspace:*",
+        "@repo/tailwind-config": "workspace:*",
+        "@repo/tsconfig": "workspace:*",
+        "@types/node": "^20.11.25",
+        "@types/react": "^18.2.64",
+        "@types/react-dom": "^18.2.21",
+        "dotenv-cli": "^7.4.0",
+        "eslint": "^8.57.0",
+        "prettier": "^3.2.5",
+        "tailwindcss": "^3.4.1",
+        "tsx": "^4.7.1",
+        "type-fest": "^4.12.0",
+        "typescript": "^5.4.2"
+    },
+    "eslintConfig": {
+        "root": true,
+        "extends": [
+            "@repo/eslint-config/library"
+        ]
+    },
+    "prettier": "@repo/prettier-config"
+}

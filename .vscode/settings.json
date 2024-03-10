@@ -1,0 +1,226 @@
+{
+    
+    "editor.minimap.enabled": false,
+
+    "editor.tabSize": 4,
+
+    "editor.defaultFormatter": null,
+
+    "[javascript]": {
+        "editor.defaultFormatter": "vscode.typescript-language-features"
+    },
+
+    "[handlebars]": {
+        "editor.defaultFormatter": "vscode.html-language-features"
+    },
+
+
+    "javascript.preferences.importModuleSpecifier": "non-relative",
+    "typescript.preferences.importModuleSpecifier": "non-relative",
+
+
+    "editor.quickSuggestions": {
+        "strings": "on",
+    },
+
+    "editor.snippetSuggestions": "none",
+
+    "eslint.workingDirectories": [
+        {
+            "mode": "auto"
+        }
+    ],
+
+    "javascript.preferences.importModuleSpecifierEnding": "minimal",
+
+    "tailwindCSS.experimental.classRegex": [
+        ["classnames\\(([^)]*)\\)", "[\"'`]([^\"'`]*).*?[\"'`]"],
+        ["cva\\(([^)]*)\\)", "[\"'`]([^\"'`]*).*?[\"'`]"],
+        ["cn\\(([^)]*)\\)", "[\"'`]([^\"'`]*).*?[\"'`]"],
+        "(?:Style|Styles)\\s*=\\s*`([^`]*)",
+    ],
+    "tailwindCSS.classAttributes": [
+        "class",
+        "className",
+        "ngClass", // default
+        ".*Style.*",
+        ".*Styles.*",
+        ".*ClassName"
+    ],
+
+    "typescript.tsdk": "node_modules/typescript/lib",
+    "typescript.enablePromptUseWorkspaceTsdk": true,
+    "editor.suggest.showProperties": true,
+
+    "json.format.enable": true,
+    "json.format.keepLines": true,
+
+
+    // RECOMENDED BUT OPTIONAL delete or modify to your prefrences
+
+
+    "typescript.format.insertSpaceAfterTypeAssertion": true,
+    "typescript.preferences.preferTypeOnlyAutoImports": true,
+
+    "typescript.format.enable": true,
+    "typescript.format.semicolons": "ignore",
+    "typescript.format.insertSpaceAfterFunctionKeywordForAnonymousFunctions": true,
+    "typescript.format.insertSpaceAfterCommaDelimiter": true,
+    "typescript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyParenthesis": false,
+    "typescript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyBraces": true,
+    "typescript.format.insertSpaceAfterOpeningAndBeforeClosingTemplateStringBraces": true,
+    "typescript.format.insertSpaceAfterOpeningAndBeforeClosingJsxExpressionBraces": true,
+    "typescript.format.insertSpaceAfterConstructor": true,
+    "typescript.format.insertSpaceAfterKeywordsInControlFlowStatements": true,
+    "typescript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyBrackets": false,
+    "typescript.format.insertSpaceAfterOpeningAndBeforeClosingEmptyBraces": true,
+    "typescript.format.insertSpaceAfterSemicolonInForStatements": true,
+    "typescript.format.insertSpaceBeforeAndAfterBinaryOperators": true,
+    "typescript.format.insertSpaceBeforeFunctionParenthesis": false,
+    "typescript.format.indentSwitchCase": true,
+    "typescript.format.placeOpenBraceOnNewLineForFunctions": false,
+    "typescript.format.placeOpenBraceOnNewLineForControlBlocks": false,
+
+    "javascript.format.enable": true,
+    "javascript.format.semicolons": "ignore",
+    "javascript.format.insertSpaceAfterFunctionKeywordForAnonymousFunctions": true,
+    "javascript.format.insertSpaceAfterCommaDelimiter": true,
+    "javascript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyParenthesis": false,
+    "javascript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyBraces": true,
+    "javascript.format.insertSpaceAfterOpeningAndBeforeClosingTemplateStringBraces": true,
+    "javascript.format.insertSpaceAfterOpeningAndBeforeClosingJsxExpressionBraces": true,
+    "javascript.format.insertSpaceAfterConstructor": true,
+    "javascript.format.insertSpaceAfterKeywordsInControlFlowStatements": true,
+    "javascript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyBrackets": false,
+    "javascript.format.insertSpaceAfterOpeningAndBeforeClosingEmptyBraces": true,
+    "javascript.format.insertSpaceAfterSemicolonInForStatements": true,
+    "javascript.format.insertSpaceBeforeAndAfterBinaryOperators": true,
+    "javascript.format.insertSpaceBeforeFunctionParenthesis": false,
+    "javascript.format.placeOpenBraceOnNewLineForFunctions": false,
+    "javascript.format.placeOpenBraceOnNewLineForControlBlocks": false,
+
+
+
+
+    // Some color changes modify to your prefrence or remove if you already have a setup you like
+
+    "editor.semanticTokenColorCustomizations": {
+        "enabled": true,
+        "rules": {
+            "type": {
+                "foreground": "#4EC9B0"
+            },
+            "interface": {
+                "foreground": "#4EC9B0"
+            },
+            "typeParameter": {
+                "foreground": "#a8dea0",
+            },
+            "namespace": {
+                "foreground": "#afab7d"
+            },
+            "function": {
+                "foreground": "#ffedb4",
+            },
+            "method": {
+                "foreground": "#ffedb4",
+            },
+            "string": {
+                "foreground": "#CE9178",
+            },
+            "class": {
+                "foreground": "#ff3d64",
+                "bold": true,
+                "fontStyle": "italic"
+            },
+        }
+    },
+
+    "editor.tokenColorCustomizations": {
+        "textMateRules": [
+            {
+                "scope": [
+                    "variable.parameter"
+                ],
+                "settings": {
+                    "foreground": "#ffaaaa"
+                }
+            },
+            {
+                "scope": [
+                    "keyword",
+                    "keyword.control",
+                    "variable.language",
+                ],
+                "settings": {
+                    "foreground": "#C586C0"
+                }
+            },
+            {
+                "scope": "keyword.operator",
+                "settings": {
+                    "foreground": "#ffffff"
+                }
+            },
+            {
+                "scope": "keyword.operator.expression",
+                "settings": {
+                    "foreground": "#C586C0"
+                }
+            },
+            {
+                "scope": [
+                    "support.class.component.jsx",
+                    "support.class.component.tsx",
+                ],
+                "settings": {
+                    "foreground": "#7b5eff",
+                    "fontStyle": ""
+                }
+            },
+            {
+                "scope": [
+                    "entity.name.tag.jsx",
+                    "entity.name.tag.tsx",
+                ],
+                "settings": {
+                    "foreground": "#a18cff",
+                    "fontStyle": "italic underline"
+                }
+            },
+            {
+                "scope": [
+                    "string",
+                ],
+                "settings": {
+                    "foreground": "#CE9178"
+                }
+            },
+            {
+                "scope": [
+                    "comment",
+                ],
+                "settings": {
+                    "foreground": "#8B949E"
+                }
+            },
+            {
+                "scope": [
+                    "storage.type",
+                    "storage.modifier",
+                ],
+                "settings": {
+                    "foreground": "#569CD6"
+                }
+            },
+        ]
+    },
+
+    "workbench.colorCustomizations": {
+        "[Default Dark Modern]": {
+            "editor.background": "#161518"
+        }
+    },
+
+
+}

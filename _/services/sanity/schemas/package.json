@@ -1,0 +1,90 @@
+{
+    "name": "@repo/sanity-schemas",
+    "private": true,
+    "type": "module",
+    "version": "0.0.0",
+    "scripts": {
+        "clean": "rm -rf .turbo node_modules dist",
+        "lint": "eslint .",
+        "typecheck": "tsc --noEmit",
+        "prettie:format": "prettier --check \"**/*.{mjs,ts,md,json}\"",
+        "with-env": "dotenv -e .env -- "
+    },
+    "exports": {
+        ".": null,
+        "./names": "./src/names.ts",
+        "./validations": "./src/validations.ts",
+        "./object-configs": "./src/object-configs.ts",
+        "./@client/lib-sanity-schema": "./src/LIB_SANITY_SCHEMA.@C.ts",
+        "./@client/schema-helpers": "./src/schema-helpers/@client/index.ts",
+        "./@client/define-page-type": "./src/schema-helpers/@client/define-type/with-meta/index.ts",
+        "./@server/migrations/rename-document": "./src/migrations/@server/rename-document.ts",
+        "./@server/fetch": "./src/fetch/@server/index.ts"
+    },
+    "dependencies": {
+        "@portabletext/react": "^3.0.11",
+        "@repo/app-content-config": "workspace:*",
+        "@repo/css-utils": "workspace:*",
+        "@repo/groqd-utils": "workspace:*",
+        "@repo/next-utils": "workspace:*",
+        "@repo/react-utils": "workspace:*",
+        "@repo/shared-icons": "workspace:*",
+        "@repo/ts-utils": "workspace:*",
+        "@repo/ts-vars": "workspace:*",
+        "@sanity/client": "^6.15.3",
+        "@sanity/code-input": "^4.1.3",
+        "@sanity/dashboard": "^3.1.6",
+        "@sanity/icons": "^2.10.3",
+        "@sanity/image-url": "^1.0.2",
+        "@sanity/table": "^1.1.2",
+        "@sanity/ui": "^2.0.7",
+        "@sanity/vision": "3.32.0",
+        "groq": "3.32.0",
+        "groqd": "^0.15.10",
+        "next": "^14.1.3",
+        "next-sanity": "8.3.0",
+        "prism-react-renderer": "^2.3.1",
+        "prismjs": "^1.29.0",
+        "react": "^18.2.0",
+        "react-dom": "^18.2.0",
+        "react-icons": "^5.0.1",
+        "react-youtube": "^10.1.0",
+        "sanity": "3.32.0",
+        "sanity-plugin-media": "^2.2.5",
+        "zod": "^3.22.4"
+    },
+    "peerDependencies": {
+        "next": "^14.1.3",
+        "react": "^18.2.0",
+        "react-dom": "^18.2.0",
+        "zod": "^3.22.4"
+    },
+    "devDependencies": {
+        "@repo/eslint-config": "workspace:*",
+        "@repo/prettier-config": "workspace:*",
+        "@repo/tailwind-config": "workspace:*",
+        "@repo/ts-globals": "workspace:*",
+        "@repo/tsconfig": "workspace:*",
+        "@types/node": "^20.11.25",
+        "@types/prismjs": "^1.26.3",
+        "@types/react": "^18.2.64",
+        "@types/react-dom": "^18.2.21",
+        "autoprefixer": "^10.4.18",
+        "dotenv-cli": "^7.4.0",
+        "eslint": "^8.57.0",
+        "postcss": "^8.4.35",
+        "postcss-import": "^16.0.1",
+        "prettier": "^3.2.5",
+        "tailwindcss": "^3.4.1",
+        "tsx": "^4.7.1",
+        "type-fest": "^4.12.0",
+        "typescript": "^5.4.2"
+    },
+    "eslintConfig": {
+        "root": true,
+        "extends": [
+            "@repo/eslint-config/library"
+        ]
+    },
+    "prettier": "@repo/prettier-config"
+}

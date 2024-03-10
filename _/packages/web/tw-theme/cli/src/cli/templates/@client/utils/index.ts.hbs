@@ -1,0 +1,20 @@
+"use client"
+
+// DO NOT MANUALLY EDIT THIS FILE. IT IS GENERATED  & OVERWRITTEN BY [ pnpm theme ]
+
+
+import { modThemeGeneric, setThemeGeneric } from "@repo/tw-theme/@client"
+import { hsl, rgb, hex } from "@repo/tw-theme/utils"
+import type GeneratedTheme from '../../GEN_THEME'
+
+export { hsl, rgb, hex }
+
+type Theme = typeof GeneratedTheme
+
+{{#if theme.isThemeResolved}}
+export const modTheme = modThemeGeneric<Theme['colors']>
+export const setTheme = setThemeGeneric<Theme['colors']>
+{{else}}
+export const modTheme__{{{theme.id}}} = modThemeGeneric<Theme['colors']>
+export const setTheme__{{{theme.id}}} = setThemeGeneric<Theme['colors']>
+{{/if}}

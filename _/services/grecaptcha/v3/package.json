@@ -1,0 +1,63 @@
+{
+    "name": "@repo/grecaptcha-v3",
+    "private": true,
+    "type": "module",
+    "version": "0.0.0",
+    "scripts": {
+        "clean": "rm -rf .turbo node_modules dist",
+        "lint": "eslint .",
+        "typecheck": "tsc --noEmit",
+        "prettie:format": "prettier --check \"**/*.{mjs,ts,md,json}\"",
+        "with-env": "dotenv -e .env -- "
+    },
+    "exports": {
+        ".": null,
+        "./@common/config": "./@common/config/index.ts",
+        "./@server/utils": "./@server/utils/index.ts"
+    },
+    "dependencies": {
+        "@env/dev-only": "workspace:*",
+        "@env/grecaptcha-v3": "workspace:*",
+        "@env/next-app": "workspace:*",
+        "@env/vercel": "workspace:*",
+        "@repo/css-utils": "workspace:*",
+        "@repo/react-utils": "workspace:*",
+        "@repo/ts-utils": "workspace:*",
+        "@repo/ts-vars": "workspace:*",
+        "react": "^18.2.0",
+        "react-dom": "^18.2.0",
+        "zod": "^3.22.4"
+    },
+    "peerDependencies": {
+        "react": "^18.2.0",
+        "react-dom": "^18.2.0",
+        "zod": "^3.22.4"
+    },
+    "devDependencies": {
+        "@repo/eslint-config": "workspace:*",
+        "@repo/prettier-config": "workspace:*",
+        "@repo/tailwind-config": "workspace:*",
+        "@repo/ts-globals": "workspace:*",
+        "@repo/tsconfig": "workspace:*",
+        "@types/node": "^20.11.25",
+        "@types/react": "^18.2.64",
+        "@types/react-dom": "^18.2.21",
+        "autoprefixer": "^10.4.18",
+        "dotenv-cli": "^7.4.0",
+        "eslint": "^8.57.0",
+        "postcss": "^8.4.35",
+        "postcss-import": "^16.0.1",
+        "prettier": "^3.2.5",
+        "tailwindcss": "^3.4.1",
+        "tsx": "^4.7.1",
+        "type-fest": "^4.12.0",
+        "typescript": "^5.4.2"
+    },
+    "eslintConfig": {
+        "root": true,
+        "extends": [
+            "@repo/eslint-config/library"
+        ]
+    },
+    "prettier": "@repo/prettier-config"
+}

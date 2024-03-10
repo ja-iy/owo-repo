@@ -1,0 +1,93 @@
+{
+    "name": "@repo/node-utils",
+    "private": true,
+    "type": "module",
+    "version": "0.0.0",
+    "scripts": {
+        "build": "pnpm with-env tsup",
+        "build:types": "pnpm with-env tsc -p . --emitDeclarationOnly --declaration --noEmit false",
+        "build:deps": "pnpm with-env tsup",
+        "build:packages": "pnpm with-env tsup",
+        "dev": "pnpm with-env tsup -d --watch",
+        "dev:deps": "pnpm with-env tsup -d --watch",
+        "dev:packages": "pnpm with-env tsup -d --watch",
+        "clean": "rm -rf .turbo node_modules dist",
+        "lint": "eslint .",
+        "typecheck": "tsc --noEmit",
+        "prettie:format": "prettier --check \"**/*.{mjs,ts,md,json}\"",
+        "with-env": "dotenv -e .env -- "
+    },
+    "exports": {
+        "./file-actions": {
+            "types": "./dist/src/file-actions/index.d.ts",
+            "import": "./dist/src/file-actions/index.js",
+            "require": "./dist/src/file-actions/index.cjs"
+        },
+        "./clipboard": {
+            "types": "./dist/src/clipboard/index.d.ts",
+            "import": "./dist/src/clipboard/index.js",
+            "require": "./dist/src/clipboard/index.cjs"
+        },
+        "./console": {
+            "types": "./dist/src/console/index.d.ts",
+            "import": "./dist/src/console/index.js",
+            "require": "./dist/src/console/index.cjs"
+        },
+        "./file-system": {
+            "types": "./dist/src/file-system/index.d.ts",
+            "import": "./dist/src/file-system/index.js",
+            "require": "./dist/src/file-system/index.cjs"
+        }
+    },
+    "dependencies": {
+        "@inquirer/core": "^7.0.2",
+        "@inquirer/prompts": "^4.2.1",
+        "@repo/ts-utils": "workspace:*",
+        "@repo/ts-vars": "workspace:*",
+        "chalk": "^5.3.0",
+        "cli-progress": "^3.12.0",
+        "cli-spinners": "^2.9.2",
+        "clipboardy": "^4.0.0",
+        "fs-extra": "^11.2.0",
+        "handlebars": "^4.7.8",
+        "minimist": "^1.2.8",
+        "ora": "^8.0.1",
+        "picocolors": "^1.0.0",
+        "yargs": "^17.7.2",
+        "zod": "^3.22.4"
+    },
+    "peerDependencies": {
+        "@inquirer/core": "^7.0.2",
+        "@inquirer/prompts": "^4.2.1",
+        "chalk": "^5.3.0",
+        "fs-extra": "^11.2.0",
+        "handlebars": "^4.7.8",
+        "minimist": "^1.2.8",
+        "yargs": "^17.7.2",
+        "zod": "^3.22.4"
+    },
+    "devDependencies": {
+        "@repo/eslint-config": "workspace:*",
+        "@repo/prettier-config": "workspace:*",
+        "@repo/tsconfig": "workspace:*",
+        "@repo/tsup-config": "workspace:*",
+        "@types/cli-progress": "^3.11.5",
+        "@types/fs-extra": "^11.0.4",
+        "@types/node": "^20.11.25",
+        "@types/yargs": "^17.0.32",
+        "dotenv-cli": "^7.4.0",
+        "eslint": "^8.57.0",
+        "prettier": "^3.2.5",
+        "tsup": "^8.0.2",
+        "tsx": "^4.7.1",
+        "type-fest": "^4.12.0",
+        "typescript": "^5.4.2"
+    },
+    "eslintConfig": {
+        "root": true,
+        "extends": [
+            "@repo/eslint-config/library"
+        ]
+    },
+    "prettier": "@repo/prettier-config"
+}

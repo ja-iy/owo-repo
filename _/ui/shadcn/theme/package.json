@@ -1,0 +1,56 @@
+{
+    "name": "@repo-theme/shadcn",
+    "private": true,
+    "type": "module",
+    "version": "0.0.0",
+    "scripts": {
+        "clean": "rm -rf .turbo node_modules dist",
+        "lint": "eslint .",
+        "typecheck": "tsc --noEmit",
+        "prettie:format": "prettier --check \"**/*.{mjs,ts,md,json}\"",
+        "with-env": "dotenv -e .env -- "
+    },
+    "exports": {
+        ".": null,
+        "./@gen/@client/hooks": "./@gen/tw-theme/@client/hooks/index.ts",
+        "./@gen/@client/utils": "./@gen/tw-theme/@client/utils/index.ts",
+        "./@gen/@client/components": "./@gen/tw-theme/@client/components/index.ts",
+        "./@gen/tailwind-config": "./@gen/tw-theme/tailwind.config.ts",
+        "./theme-config": {
+            "types": "./index.d.ts",
+            "import": "./@config/theme.config.mjs"
+        },
+        "./tailwind-config": "./@config/tailwind.config.ts",
+        "./@config/theme.css": "./@config/theme.css"
+    },
+    "dependencies": {
+        "@repo/ts-utils": "workspace:*",
+        "@repo/ts-vars": "workspace:*",
+        "@repo/tw-theme": "workspace:*",
+        "zod": "^3.22.4"
+    },
+    "peerDependencies": {
+        "zod": "^3.22.4"
+    },
+    "devDependencies": {
+        "@repo/eslint-config": "workspace:*",
+        "@repo/prettier-config": "workspace:*",
+        "@repo/tsconfig": "workspace:*",
+        "@types/node": "^20.11.25",
+        "dotenv-cli": "^7.4.0",
+        "eslint": "^8.57.0",
+        "prettier": "^3.2.5",
+        "tailwindcss": "^3.4.1",
+        "tailwindcss-animate": "^1.0.7",
+        "tsx": "^4.7.1",
+        "type-fest": "^4.12.0",
+        "typescript": "^5.4.2"
+    },
+    "eslintConfig": {
+        "root": true,
+        "extends": [
+            "@repo/eslint-config/library"
+        ]
+    },
+    "prettier": "@repo/prettier-config"
+}

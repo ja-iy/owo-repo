@@ -1,0 +1,10 @@
+{
+    "extends": "@repo/tsconfig/lib/base.json",
+    "compilerOptions": {
+        "rootDir": ".",
+        "outDir": "dist",
+        "baseUrl": "."
+    },
+    "include": [ ".", "@gen/**/*", ".config/**/*" ],
+    "exclude": [ "node_modules", "dist", "build", "out", "output" ]
+}

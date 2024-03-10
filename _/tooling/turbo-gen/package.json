@@ -1,0 +1,58 @@
+{
+    "name": "@repo/turbo-gen",
+    "private": true,
+    "version": "0.0.0",
+    "scripts": {
+        "build": "pnpm with-env tsup",
+        "build:types": "pnpm with-env tsc -p . --emitDeclarationOnly --declaration --noEmit false",
+        "build:deps": "pnpm with-env tsup",
+        "build:tooling": "pnpm with-env tsup",
+        "build:packages": "pnpm with-env tsup",
+        "dev": "pnpm with-env tsup -d --watch",
+        "dev:deps": "pnpm with-env tsup -d --watch",
+        "dev:tooling": "pnpm with-env tsup -d --watch",
+        "dev:packages": "pnpm with-env tsup -d --watch",
+        "clean": "rm -rf .turbo node_modules",
+        "lint": "eslint .",
+        "prettie:format": "prettier --check \"**/*.{mjs,ts,md,json}\"",
+        "typecheck": "tsc --noEmit",
+        "with-env": "dotenv -e .env -- "
+    },
+    "exports": {
+        ".": {
+            "types": "./dist/src/index.d.ts",
+            "import": "./dist/src/index.mjs",
+            "require": "./dist/src/index.js"
+        }
+    },
+    "dependencies": {
+        "@repo/ts-utils": "workspace:*",
+        "fs-extra": "^11.2.0",
+        "zod": "^3.22.4"
+    },
+    "devDependencies": {
+        "@repo/eslint-config": "workspace:*",
+        "@repo/prettier-config": "workspace:*",
+        "@repo/ts-vars": "workspace:*",
+        "@repo/tsconfig": "workspace:*",
+        "@repo/tsup-config": "workspace:*",
+        "@turbo/gen": "^1.12.5",
+        "@types/fs-extra": "^11.0.4",
+        "dotenv-cli": "^7.4.0",
+        "npm-check-updates": "^16.14.15",
+        "prettier": "^3.2.5",
+        "tsup": "^8.0.2",
+        "turbo": "^1.12.5",
+        "typescript": "^5.4.2"
+    },
+    "engines": {
+        "node": ">=18.18.2"
+    },
+    "eslintConfig": {
+        "root": true,
+        "extends": [
+            "@repo/eslint-config/library"
+        ]
+    },
+    "prettier": "@repo/prettier-config"
+}

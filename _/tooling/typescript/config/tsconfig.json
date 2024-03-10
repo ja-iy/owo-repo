@@ -1,0 +1,8 @@
+{
+    "extends": "./lib/dev-tool.json",
+    "compilerOptions": {
+        "rootDir": ".",
+    },
+    "include": ["."],
+    "exclude": ["node_modules"]
+}

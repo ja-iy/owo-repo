@@ -1,0 +1,61 @@
+{
+    "name": "@repo/next-utils",
+    "private": true,
+    "version": "0.0.0",
+    "license": "MIT",
+    "scripts": {
+        "clean": "rm -rf .turbo node_modules",
+        "lint": "eslint .",
+        "prettie:format": "prettier --check \"**/*.{mjs,ts,md,json}\"",
+        "typecheck": "tsc --noEmit"
+    },
+    "exports": {
+        ".": null,
+        "./site-url": "./src/@common/url/site-url.ts",
+        "./route-types": "./src/@common/route-types/index.ts",
+        "./@server/meta-no-index": "./src/@server/meta/meta-no-index.ts",
+        "./@server/meta-builder": "./src/@server/meta/meta-builder.ts",
+        "./components/@client/app-image": "./src/_components/@client/app-image/index.tsx",
+        "./redirects": "./src/@common/redirects/index.ts",
+        "./search-params/parse": "./src/search-params/parse.ts",
+        "./search-params/@client/hooks": "./src/search-params/_hooks/@client/index.ts"
+    },
+    "dependencies": {
+        "@env/dev-only": "workspace:*",
+        "@env/next-app": "workspace:*",
+        "@env/vercel": "workspace:*",
+        "@repo/css-utils": "workspace:*",
+        "@repo/ts-env": "workspace:*",
+        "@repo/ts-utils": "workspace:*",
+        "next": "^14.1.3",
+        "react": "^18.2.0",
+        "react-dom": "^18.2.0",
+        "zod": "^3.22.4"
+    },
+    "peerDependencies": {
+        "@env/dev-only": "workspace:*",
+        "@env/next-app": "workspace:*",
+        "@env/vercel": "workspace:*",
+        "@repo/ts-env": "workspace:*",
+        "zod": "^3.22.4"
+    },
+    "devDependencies": {
+        "@repo/eslint-config": "workspace:*",
+        "@repo/prettier-config": "workspace:*",
+        "@repo/ts-env": "workspace:*",
+        "@repo/tsconfig": "workspace:*",
+        "@types/node": "^20.11.25",
+        "@types/react": "^18.2.64",
+        "@types/react-dom": "^18.2.21",
+        "eslint": "^8.57.0",
+        "prettier": "^3.2.5",
+        "typescript": "^5.4.2"
+    },
+    "eslintConfig": {
+        "root": true,
+        "extends": [
+            "@repo/eslint-config/library"
+        ]
+    },
+    "prettier": "@repo/prettier-config"
+}

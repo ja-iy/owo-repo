@@ -1,0 +1,12 @@
+{
+	"extends": "@repo/tsconfig/lib/built/react.json",
+	"compilerOptions": {
+		"rootDir": ".",
+		"outDir": "dist",
+	},
+	"include": [
+        ".",
+        "src/**/*",
+    ],
+	"exclude": ["node_modules", "dist"]
+}

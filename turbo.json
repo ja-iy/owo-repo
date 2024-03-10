@@ -1,0 +1,145 @@
+{
+    "$schema": "https://turborepo.org/schema.json",
+    "globalDependencies": [
+        "**/.env",
+        "**/.env.*"
+    ],
+    "pipeline": {
+        "topological": {
+            "dependsOn": [
+                "^topological"
+            ]
+        },
+        "build": {
+            "dependsOn": [
+                "^build"
+            ],
+            "outputs": [
+                ".next/**",
+                "!.next/cache/**",
+                "next-env.d.ts",
+                ".expo/**",
+                ".output/**",
+                ".vercel/output/**",
+                "dist/**"
+            ]
+        },
+        "build:types": {
+            "dependsOn": [
+                "^build:types"
+            ],
+            "outputs": [
+                ".next/**",
+                "!.next/cache/**",
+                "next-env.d.ts",
+                ".expo/**",
+                ".output/**",
+                ".vercel/output/**",
+                "dist/**"
+            ]
+        },
+        "build:deps": {
+            "dependsOn": [
+                "^build:deps"
+            ],
+            "outputs": [
+                ".next/**",
+                "!.next/cache/**",
+                "next-env.d.ts",
+                ".expo/**",
+                ".output/**",
+                ".vercel/output/**",
+                "dist/**"
+            ]
+        },
+        "build:libs": {
+            "dependsOn": [
+                "^build:libs"
+            ],
+            "outputs": [
+                ".next/**",
+                "!.next/cache/**",
+                "next-env.d.ts",
+                ".expo/**",
+                ".output/**",
+                ".vercel/output/**",
+                "dist/**"
+            ]
+        },
+        "build:packages": {
+            "dependsOn": [
+                "^build:packages"
+            ],
+            "outputs": [
+                ".next/**",
+                "!.next/cache/**",
+                "next-env.d.ts",
+                ".expo/**",
+                ".output/**",
+                ".vercel/output/**",
+                "dist/**"
+            ]
+        },
+        "build:tooling": {
+            "dependsOn": [
+                "^build:tooling"
+            ],
+            "outputs": [
+                ".next/**",
+                "!.next/cache/**",
+                "next-env.d.ts",
+                ".expo/**",
+                ".output/**",
+                ".vercel/output/**",
+                "dist/**"
+            ]
+        },
+        "build:debug": {
+            "dependsOn": [
+                "^build",
+                "^build:debug"
+            ],
+            "outputs": [
+                ".next/**",
+                "!.next/cache/**",
+                "next-env.d.ts",
+                ".expo/**",
+                ".output/**",
+                ".vercel/output/**",
+                "dist/**"
+            ]
+        },
+        "legacy:dev": {
+            "persistent": true,
+            "cache": false
+        },
+        "format:prettier:entire-repo": {
+            "outputs": [
+                "node_modules/.cache/.prettiercache"
+            ],
+            "outputMode": "new-only"
+        },
+        "lint": {
+            "dependsOn": [
+                "^topological"
+            ],
+            "outputs": [
+                "node_modules/.cache/.eslintcache"
+            ]
+        },
+        "typecheck": {
+            "dependsOn": [
+                "^topological"
+            ],
+            "outputs": [
+                "node_modules/.cache/tsbuildinfo.json"
+            ]
+        },
+        "clean": {
+            "cache": false
+        },
+        "//#clean": {
+            "cache": false
+        }
+    }
+}

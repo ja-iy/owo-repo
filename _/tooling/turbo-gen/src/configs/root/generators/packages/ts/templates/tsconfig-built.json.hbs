@@ -1,0 +1,14 @@
+{
+    "extends": "@repo/tsconfig/{{ tsconfig.extendsPath }}",
+    "compilerOptions": {
+        "rootDir": ".",
+        "outDir": "dist",
+        "baseUrl": ".",
+        "paths": {
+            "@/*": ["src/*"],
+            "~/*": ["./*"]
+        }
+    },
+    "include": {{{ tsconfig.include }}},
+    "exclude": {{{ tsconfig.exclude }}}
+}

@@ -1,0 +1,88 @@
+@import "@repo-theme/shadcn/@config/theme.css";
+@import "@repo-theme/radix/@config/theme.css";
+
+/*  DO NOT MANUALLY EDIT THIS FILE. IT IS GENERATED FROM [ pnpm theme ] */
+
+:root {
+	--owo: var(--lm-owo);
+	--background: var(--lm-background);
+	--foreground: var(--lm-foreground);
+	--muted: var(--lm-muted);
+	--muted-foreground: var(--lm-muted-foreground);
+	--popover: var(--lm-popover);
+	--popover-foreground: var(--lm-popover-foreground);
+	--card: var(--lm-card);
+	--card-foreground: var(--lm-card-foreground);
+	--border: var(--lm-border);
+	--input: var(--lm-input);
+	--primary: var(--lm-primary);
+	--primary-foreground: var(--lm-primary-foreground);
+	--secondary: var(--lm-secondary);
+	--secondary-foreground: var(--lm-secondary-foreground);
+	--accent: var(--lm-accent);
+	--destructive: var(--lm-destructive);
+	--destructive-foreground: var(--lm-destructive-foreground);
+	--ring: var(--lm-ring);
+
+	--lm-owo: 0deg 0% 98%;
+	--lm-background: 0deg 0% 98%;
+	--lm-foreground: 240deg 10% 4%;
+	--lm-muted: 240deg 5% 96%;
+	--lm-muted-foreground: 240deg 4% 46%;
+	--lm-popover: 0deg 0% 100%;
+	--lm-popover-foreground: 240deg 10% 4%;
+	--lm-card: 0deg 0% 100%;
+	--lm-card-foreground: 240deg 10% 4%;
+	--lm-border: 240deg 6% 90%;
+	--lm-input: 240deg 6% 90%;
+	--lm-primary: 240deg 6% 10%;
+	--lm-primary-foreground: 0deg 0% 98%;
+	--lm-secondary: 240deg 5% 96%;
+	--lm-secondary-foreground: 240deg 6% 10%;
+	--lm-accent: 243deg 100% 96%;
+	--lm-destructive: 0deg 84% 60%;
+	--lm-destructive-foreground: 0deg 0% 98%;
+	--lm-ring: 240deg 5% 65%;
+
+	--dm-owo: 240deg 10% 4%;
+	--dm-background: 240deg 10% 4%;
+	--dm-foreground: 0deg 0% 98%;
+	--dm-muted: 240deg 4% 16%;
+	--dm-muted-foreground: 240deg 5% 65%;
+	--dm-popover: 240deg 10% 4%;
+	--dm-popover-foreground: 0deg 0% 98%;
+	--dm-card: 240deg 10% 4%;
+	--dm-card-foreground: 0deg 0% 98%;
+	--dm-border: 240deg 4% 16%;
+	--dm-input: 240deg 4% 16%;
+	--dm-primary: 0deg 0% 98%;
+	--dm-primary-foreground: 240deg 6% 10%;
+	--dm-secondary: 240deg 4% 16%;
+	--dm-secondary-foreground: 0deg 0% 98%;
+	--dm-accent: 240deg 3% 15%;
+	--dm-destructive: 0deg 84% 60%;
+	--dm-destructive-foreground: 0deg 86% 97%;
+	--dm-ring: 240deg 4% 16%;
+}
+
+.dark {
+	--owo: var(--dm-owo);
+	--background: var(--dm-background);
+	--foreground: var(--dm-foreground);
+	--muted: var(--dm-muted);
+	--muted-foreground: var(--dm-muted-foreground);
+	--popover: var(--dm-popover);
+	--popover-foreground: var(--dm-popover-foreground);
+	--card: var(--dm-card);
+	--card-foreground: var(--dm-card-foreground);
+	--border: var(--dm-border);
+	--input: var(--dm-input);
+	--primary: var(--dm-primary);
+	--primary-foreground: var(--dm-primary-foreground);
+	--secondary: var(--dm-secondary);
+	--secondary-foreground: var(--dm-secondary-foreground);
+	--accent: var(--dm-accent);
+	--destructive: var(--dm-destructive);
+	--destructive-foreground: var(--dm-destructive-foreground);
+	--ring: var(--dm-ring);
+}

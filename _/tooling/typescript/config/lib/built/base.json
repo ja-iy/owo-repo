@@ -1,0 +1,17 @@
+{
+    "$schema": "https://json.schemastore.org/tsconfig",
+    "display": "Default Built Package",
+    "extends": "../../base.json",
+    "compilerOptions": {
+
+        "moduleResolution": "Bundler",
+        "module": "ESNext",
+        "noEmit": false,
+        "sourceMap": true,
+
+        "composite": true,
+        "declaration": true,
+        "declarationMap": true,
+
+    }
+}

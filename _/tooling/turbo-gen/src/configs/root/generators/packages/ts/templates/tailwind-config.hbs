@@ -1,0 +1,15 @@
+import type { Config } from "tailwindcss"
+
+{{#each tailwind.imports}}
+{{{ this }}}
+{{/each}}
+
+export default {
+    "content": ["./src/**/*.{js,mjs,cjs,jsx,ts,tsx}"],
+    "presets": [
+        {{#each tailwind.presets}}
+        {{ this }},
+        {{/each}}
+    ],
+} satisfies Config
+

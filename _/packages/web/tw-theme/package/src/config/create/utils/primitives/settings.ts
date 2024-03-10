@@ -1,0 +1,11 @@
+
+
+export type AppThemeSettings<
+    TDARKMODE_CSS_CLASSNAME extends string = string,
+    TDARKMODE_LOCALSTORAGE_KEY extends string = string,
+    TOVERRIDE_SYSTEM_PREFRENCE_ON_UNSET  extends 'dark' | 'light' | undefined = 'dark' | 'light' | undefined
+> = {
+    DARKMODE_CSS_CLASSNAME: TDARKMODE_CSS_CLASSNAME,
+    DARKMODE_LOCALSTORAGE_KEY: TDARKMODE_LOCALSTORAGE_KEY,
+    OVERRIDE_SYSTEM_PREFRENCE_ON_UNSET?: TOVERRIDE_SYSTEM_PREFRENCE_ON_UNSET
+}

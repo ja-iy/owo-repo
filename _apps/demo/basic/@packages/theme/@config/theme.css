@@ -1,0 +1,14 @@
+@import '../@gen/tw-theme/theme.css';
+
+:root {
+    --mobile-width: 900px;
+}
+
+@layer base {
+
+}
+
+@layer components {
+
+}
+

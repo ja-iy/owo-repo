@@ -1,0 +1,12 @@
+{
+    "extends": "./tsconfig.json",
+    "compilerOptions": {
+        "rootDir": ".",
+        "baseUrl": ".",
+        "outDir": "dist",
+        "composite": false,
+        "incremental": false
+    },
+    "include": [ "theme.config.mjs", "@config/theme.config.mjs" ],
+    "exclude": [ "node_modules", "dist", "build", "out", "output" ]
+}

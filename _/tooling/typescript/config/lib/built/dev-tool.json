@@ -1,0 +1,22 @@
+{
+    "$schema": "https://json.schemastore.org/tsconfig",
+    "display": "Built Tooling Package",
+    "extends": "../../lib/built/base.json",
+    "compilerOptions": {
+
+        "target": "ESNext",
+        "moduleResolution": "Bundler",
+        "module": "ESNext",
+        "noEmit": false,
+        "sourceMap": true,
+
+        "types": [
+            "node",
+        ],
+
+        "lib": [
+            "ESNext",
+        ],
+
+    }
+}
