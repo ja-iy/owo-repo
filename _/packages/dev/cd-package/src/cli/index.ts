@@ -14,7 +14,7 @@ import { openNewTerminal } from '@/utils'
 
 async function main() {
 
-    const usageMessage = '\n'+boxen(cc.bold(cc.white("cd into package")), {
+    const usageMessage = '\n' + boxen(cc.bold(cc.white("cd into package")), {
         borderStyle: 'round',
         borderColor: 'cyan',
         width: 24,
@@ -30,15 +30,15 @@ async function main() {
 
         // DEFAULT 
 
-            // defintion
-            .command('* [package]', '', yargs => {
-                return yargs
-                    .positional('package', {
-                        type: 'string',
-                        describe: 'name in package.json',
-                        demandOption: false,
-                    })
-            },
+        // defintion
+        .command('* [package]', '', yargs => {
+            return yargs
+                .positional('package', {
+                    type: 'string',
+                    describe: 'name in package.json',
+                    demandOption: false,
+                })
+        },
 
             // handler
             async argv => {
@@ -87,23 +87,19 @@ export async function cdToPackage(input: {
             })
         }
 
-        // idealy open a new vscode terminal ( will have to make vscode extension with cli )
-        // await vscode.commands.executeCommand('workbench.action.terminal.new')
+        //convert path for platform
+        let result = pkg.dir
+        if (process.platform === 'win32') result = process.env.SHELL?.endsWith('bash.exe') ? convertToPosixPath(result) : result
+        else result = convertToPosixPath(pkg.dir)
 
-        // or open a new terminal with powershell 
-        // openNewTerminal({
-        //     type: 'powershell.exe',
-        //     name: packageName,
-        //     cwd: pkg.dir
-        // })
 
-        // instead just copy the path to clipboard and notify user
+        //copy the path to clipboard and notify user
         console.log(
             cc.gray(`\nFound ${ pkg.manifest.name }`),
-            cc.gray(`\n\nPATH: ${ cc.green(pkg.dir) }`),
-            cc.gray(`\nPASTED: ${cc.bold(`${ cc.green(`( Ctrl + V )`) } ${(cc.white(`to cd into package directory`))}\n`)}`)
+            cc.gray(`\n\nPATH: ${ cc.green(result) }`),
+            cc.gray(`\nPASTED: ${ cc.bold(`${ cc.green(`( Ctrl + V )`) } ${ (cc.white(`to cd into package directory`)) }\n`) }`)
         )
-        clipboard.writeSync(`cd ${ pkg.dir }`)
+        clipboard.writeSync(`cd ${ result }`)
 
         return
     }
@@ -129,5 +125,7 @@ async function selectPacakge(input: {
     })
 }
 
-
+function convertToPosixPath(path: string): string {
+    return path.replace(/\\/g, '/')
+}
 
