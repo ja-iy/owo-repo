@@ -2,7 +2,7 @@
 
 
 
-## What this extenstion does
+## What this extension does
 
 * Provides tooltips & pickers for hsl, rgb & hex colors in .ts, .tsx, .js, .jsx files
 
