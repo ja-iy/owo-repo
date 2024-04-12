@@ -20,20 +20,10 @@ export default defineNextConfig({
     },
 
 
-    rewrites: async () =>{
-        return [
-            { 
-                source: '/sitemap.xml', 
-                destination: '/api/sitemap'
-            },
-        ]
-    },
-
-
-    i18n:  {
-        locales: ['en'],
-        defaultLocale: 'en',
-    },
+    // i18n:  {
+    //     locales: ['en'],
+    //     defaultLocale: 'en',
+    // },
 
 
     images: { 
@@ -44,18 +34,6 @@ export default defineNextConfig({
             //     pathname: '/**',
             //     port: '',
             // },
-            {
-                protocol: 'https',
-                hostname: 'avatars.githubusercontent.com',
-                pathname: '/**',
-                port: '',
-            },
-            {
-                protocol: 'https',
-                hostname: 'cdn.discordapp.com',
-                pathname: '/**',
-                port: '',
-            }
         ],
     },
 

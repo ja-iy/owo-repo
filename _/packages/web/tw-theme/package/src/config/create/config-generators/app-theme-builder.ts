@@ -6,7 +6,7 @@ import type { Color, ColorItem, ResolveColorStringValue, ResolveColorValue, Reso
 import { resolveFontConfig } from "../utils/primitives/font"
 import type { ResolvedFontConfig, UnresolvedFontConfig } from "../utils/primitives/font"
 import type { AppThemeSettings } from "../utils/primitives/settings"
- 
+
 import { createThemeVariantModifier } from "../utils/primitives/variant"
 import type { ModColors, VariantConfig, VariantModifier, VariantModifierItem } from "../utils/primitives/variant"
 
@@ -74,10 +74,10 @@ export type ThemePackageInputItem<
 > = {
     config: TPackageTheme,
     variantName?: TVariantName,
-    variant?: VariantModifierItem<any, TPackageTheme['packageJsonName']> 
+    variant?: VariantModifierItem<any, TPackageTheme['packageJsonName']>
 }
 
-const implementInputResolver = <const T extends PackageThemeConfig>(config:T, variantName?:keyof T['variants']) => ({config, variantName})
+const implementInputResolver = <const T extends PackageThemeConfig>(config: T, variantName?: keyof T['variants']) => ({ config, variantName })
 
 
 
@@ -86,10 +86,10 @@ function implement_theme<TStore extends Store>(store: TStore) {
     return <
         const TPackageThemes extends ThemePackageInputItem[] = ThemePackageInputItem[],
     >(
-        input:  (theme: typeof implementInputResolver) => TPackageThemes ,
+        input: (theme: typeof implementInputResolver) => TPackageThemes,
     ) => {
 
-        const colors = store.colors 
+        const colors = store.colors
         const fonts = store.fonts
 
         const themes = input(implementInputResolver)
@@ -110,15 +110,20 @@ function implement_theme<TStore extends Store>(store: TStore) {
         }
 
 
-        // @ts-expect-error "colors: Overwrite"
+
+
         type AddColors = MergeObjectArray<MapArray<MapArray<TPackageThemes, 'config'>, 'colors'>>
-        // @ts-expect-error "fonts: Overwrite"
         type AddFonts = MergeObjectArray<MapArray<MapArray<TPackageThemes, 'config'>, 'fonts'>>
 
         const updatedStore = store as unknown as Overwrite<TStore, {
             colors: Overwrite<TStore['colors'], AddColors>
             fonts: Overwrite<TStore['fonts'], AddFonts>
         }>
+
+        // const updatedStore = store as unknown as Overwrite<TStore, {
+        //     colors: Overwrite<TStore['colors'], MergeObjectArray<MapArray<MapArray<TPackageThemes, 'config'>, 'colors'>>>
+        //     fonts: Overwrite<TStore['fonts'], MergeObjectArray<MapArray<MapArray<TPackageThemes, 'config'>, 'fonts'>>>
+        // }>
 
         return {
             override: perform_override(updatedStore),
@@ -132,12 +137,12 @@ function implement_theme<TStore extends Store>(store: TStore) {
 
 function set_colors<TStore extends Store>(store: TStore) {
 
-    return < 
+    return <
         TForbiddenKeys extends ExtractForbiddenKeys<TStore> = ExtractForbiddenKeys<TStore>,
         TUnresolvedColorConfig extends UnresolvedColorConfig = UnresolvedColorConfig,
     >(
         // unresolvedColorsCreator: (col: ResolveColorValue) => TUnresolvedColorConfig & Partial<Record<TForbiddenKeys, never>>
-        unresolvedColorsCreator: (col: ResolveColorValue) => TUnresolvedColorConfig & Partial<Record<TForbiddenKeys, `to set this key use .override(...) after .implements(...)`|never>>
+        unresolvedColorsCreator: (col: ResolveColorValue) => TUnresolvedColorConfig & Partial<Record<TForbiddenKeys, `to set this key use .override(...) after .implements(...)` | never>>
     ) => {
 
         const additionalColors = resolveColorConfig(unresolvedColorsCreator(resolveColorValue)) as unknown as ResolveColors<TUnresolvedColorConfig>

@@ -26,10 +26,10 @@
         "@repo/prettier-config": "workspace:*",
         "@repo/ts-env": "workspace:*",
         "@repo/tsconfig": "workspace:*",
-        "@types/node": "^20.11.25",
-        "eslint": "^8.57.0",
+        "@types/node": "^20.12.7",
+        "eslint": "^9.0.0",
         "prettier": "^3.2.5",
-        "typescript": "^5.4.2",
+        "typescript": "^5.4.5",
         "zod": "^3.22.4"
     },
     "eslintConfig": {

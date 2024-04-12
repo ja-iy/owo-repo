@@ -8,6 +8,7 @@ export const tailwindPackageContentConfig = {
 
     '@repo/sanity-schemas' : { type: 'src' },
     '@repo/next-utils' : { type: 'src' },
+    '@repo-ui/shadcn' : { type: 'src' },
 
 } as const 
 

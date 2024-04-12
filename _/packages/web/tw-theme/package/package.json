@@ -14,7 +14,7 @@
         "clean": "rm -rf .turbo node_modules dist",
         "lint": "eslint .",
         "typecheck": "tsc -p . --emitDeclarationOnly --declaration --noEmit false",
-        "prettie:format": "prettier --check \"**/*.{mjs,ts,md,json}\"",
+        "prettier-format": "prettier --check \"**/*.{mjs,ts,md,json}\"",
         "with-env": "dotenv -e .env -- "
     },
     "exports": {
@@ -43,13 +43,13 @@
         "@repo/ts-local-storage": "workspace:*",
         "@repo/ts-utils": "workspace:*",
         "@repo/ts-vars": "workspace:*",
-        "jotai": "^2.7.0",
+        "jotai": "^2.8.0",
         "react": "^18.2.0",
         "react-dom": "^18.2.0",
         "zod": "^3.22.4"
     },
     "peerDependencies": {
-        "jotai": "^2.7.0",
+        "jotai": "^2.8.0",
         "react": "^18.2.0",
         "react-dom": "^18.2.0",
         "zod": "^3.22.4"
@@ -60,17 +60,17 @@
         "@repo/tailwind-config": "workspace:*",
         "@repo/tsconfig": "workspace:*",
         "@repo/tsup-config": "workspace:*",
-        "@types/node": "^20.11.25",
-        "@types/react": "^18.2.64",
-        "@types/react-dom": "^18.2.21",
-        "dotenv-cli": "^7.4.0",
-        "eslint": "^8.57.0",
+        "@types/node": "^20.12.7",
+        "@types/react": "^18.2.77",
+        "@types/react-dom": "^18.2.25",
+        "dotenv-cli": "^7.4.1",
+        "eslint": "^9.0.0",
         "prettier": "^3.2.5",
-        "tailwindcss": "^3.4.1",
+        "tailwindcss": "^3.4.3",
         "tsup": "^8.0.2",
-        "tsx": "^4.7.1",
-        "type-fest": "^4.12.0",
-        "typescript": "^5.4.2"
+        "tsx": "^4.7.2",
+        "type-fest": "^4.15.0",
+        "typescript": "^5.4.5"
     },
     "eslintConfig": {
         "root": true,

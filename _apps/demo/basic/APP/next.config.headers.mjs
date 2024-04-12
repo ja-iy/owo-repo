@@ -26,12 +26,12 @@ export const NEXT_CONFIG_HEADERS = createHeaders(async () => [
             : devHeaders({ csp: base.dev() })
     },
 
-    {
-        source: '/cms/studio/:path*',
-        headers: process.env.NODE_ENV === "production"
-            ? prodHeaders({ csp: sanity.prod() })
-            : devHeaders({ csp: sanity.dev() })
-    }
+    // {
+    //     source: '/cms/studio/:path*',
+    //     headers: process.env.NODE_ENV === "production"
+    //         ? prodHeaders({ csp: sanity.prod() })
+    //         : devHeaders({ csp: sanity.dev() })
+    // }
 
 ])
 
@@ -61,17 +61,17 @@ const base = mergeCspTagSets([
     CSP_google_recaptcha,
     CSP_google_fonts,
     // CSP_sanity({ PROJECT_ID: env.sanity.app.get('NEXT_PUBLIC_SANITY_PROJECT_ID') }),
-    CSP_profile_pictures(['github']),
+    // CSP_profile_pictures(['github']),
     CSP_youtube_embed,
 ])
 
-const sanity = mergeCspTagSets([
-    CSP_base,
-    CSP_google_fonts,
-    // CSP_sanity({ PROJECT_ID: env.sanity.app.get('NEXT_PUBLIC_SANITY_PROJECT_ID') }),
-    CSP_profile_pictures(['github']),
-    CSP_youtube_embed,
-])
+// const sanity = mergeCspTagSets([
+//     CSP_base,
+//     CSP_google_fonts,
+//     CSP_sanity({ PROJECT_ID: env.sanity.app.get('NEXT_PUBLIC_SANITY_PROJECT_ID') }),
+//     CSP_profile_pictures(['github']),
+//     CSP_youtube_embed,
+// ])
 
 
 

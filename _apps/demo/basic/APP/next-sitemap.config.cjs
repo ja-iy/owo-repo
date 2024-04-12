@@ -10,6 +10,7 @@ module.exports = nextSiteMapConfig({
         '/api*',
         '/not-found',
         '/page-not-found',
+        '/rate-limited',
         '/test*',
     ],
     sitemap_exclude_pages: [
