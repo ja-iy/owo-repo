@@ -27,7 +27,7 @@
         "@repo/css-utils": "workspace:*",
         "@repo/ts-env": "workspace:*",
         "@repo/ts-utils": "workspace:*",
-        "next": "^14.2.0",
+        "next": "^14.2.1",
         "react": "^18.2.0",
         "react-dom": "^18.2.0",
         "zod": "^3.22.4"
@@ -47,7 +47,7 @@
         "@types/node": "^20.12.7",
         "@types/react": "^18.2.77",
         "@types/react-dom": "^18.2.25",
-        "eslint": "^9.0.0",
+        "eslint": "^8.56.0",
         "prettier": "^3.2.5",
         "typescript": "^5.4.5"
     },

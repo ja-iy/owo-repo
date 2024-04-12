@@ -48,9 +48,16 @@ const config = {
                 "resolutions",
             ],
             isIgnored: true,
+        },
+
+        {
+            "label": "use eslint < 9.* until plugins support 9.*",
+            dependencies: ["eslint"],
+            pinVersion: "^8.56.0"
         }
 
     ],
+
 }
 
 module.exports = config

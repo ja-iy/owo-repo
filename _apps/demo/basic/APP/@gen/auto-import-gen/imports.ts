@@ -3,8 +3,15 @@
 // @ts-nocheck
 
 
-// @repo/shared-icons
-import type * as _repo_shared_icons__0 from "@repo/shared-icons"
+// @demo/basic-theme
+import type * as _demo_basic_theme__0 from "@demo/basic-theme/@gen/@client/hooks"
+import type * as _demo_basic_theme__1 from "@demo/basic-theme/@gen/@client/utils"
+import type * as _demo_basic_theme__2 from "@demo/basic-theme/@gen/@client/components"
+import type * as _demo_basic_theme__3 from "@demo/basic-theme/@gen/@client/init"
+import type * as _demo_basic_theme__4 from "@demo/basic-theme/@gen/tailwind-config"
+import type * as _demo_basic_theme__5 from "@demo/basic-theme/@gen/theme"
+import type * as _demo_basic_theme__6 from "@demo/basic-theme/@gen/blocking-dark-mode-init"
+import type * as _demo_basic_theme__7 from "@demo/basic-theme/tailwind-config"
 
 
 // @env/dev-only
@@ -17,65 +24,6 @@ import type * as _env_next_app__0 from "@env/next-app"
 
 // @env/vercel
 import type * as _env_vercel__0 from "@env/vercel"
-
-
-// @demo/basic-theme
-import type * as _demo_basic_theme__0 from "@demo/basic-theme/@gen/@client/hooks"
-import type * as _demo_basic_theme__1 from "@demo/basic-theme/@gen/@client/utils"
-import type * as _demo_basic_theme__2 from "@demo/basic-theme/@gen/@client/components"
-import type * as _demo_basic_theme__3 from "@demo/basic-theme/@gen/@client/init"
-import type * as _demo_basic_theme__4 from "@demo/basic-theme/@gen/tailwind-config"
-import type * as _demo_basic_theme__5 from "@demo/basic-theme/@gen/theme"
-import type * as _demo_basic_theme__6 from "@demo/basic-theme/@gen/blocking-dark-mode-init"
-import type * as _demo_basic_theme__7 from "@demo/basic-theme/tailwind-config"
-
-
-// @repo-ui/shadcn
-import type * as _repo_ui_shadcn__0 from "@repo-ui/shadcn/accordion"
-import type * as _repo_ui_shadcn__1 from "@repo-ui/shadcn/alert-dialog"
-import type * as _repo_ui_shadcn__2 from "@repo-ui/shadcn/alert"
-import type * as _repo_ui_shadcn__3 from "@repo-ui/shadcn/aspect-ratio"
-import type * as _repo_ui_shadcn__4 from "@repo-ui/shadcn/avatar"
-import type * as _repo_ui_shadcn__5 from "@repo-ui/shadcn/badge"
-import type * as _repo_ui_shadcn__6 from "@repo-ui/shadcn/button"
-import type * as _repo_ui_shadcn__7 from "@repo-ui/shadcn/calendar"
-import type * as _repo_ui_shadcn__8 from "@repo-ui/shadcn/card"
-import type * as _repo_ui_shadcn__9 from "@repo-ui/shadcn/carousel"
-import type * as _repo_ui_shadcn__10 from "@repo-ui/shadcn/checkbox"
-import type * as _repo_ui_shadcn__11 from "@repo-ui/shadcn/collapsible"
-import type * as _repo_ui_shadcn__12 from "@repo-ui/shadcn/command"
-import type * as _repo_ui_shadcn__13 from "@repo-ui/shadcn/context-menu"
-import type * as _repo_ui_shadcn__14 from "@repo-ui/shadcn/dialog"
-import type * as _repo_ui_shadcn__15 from "@repo-ui/shadcn/drawer"
-import type * as _repo_ui_shadcn__16 from "@repo-ui/shadcn/dropdown-menu"
-import type * as _repo_ui_shadcn__17 from "@repo-ui/shadcn/form"
-import type * as _repo_ui_shadcn__18 from "@repo-ui/shadcn/hover-card"
-import type * as _repo_ui_shadcn__19 from "@repo-ui/shadcn/input"
-import type * as _repo_ui_shadcn__20 from "@repo-ui/shadcn/label"
-import type * as _repo_ui_shadcn__21 from "@repo-ui/shadcn/menubar"
-import type * as _repo_ui_shadcn__22 from "@repo-ui/shadcn/navigation-menu"
-import type * as _repo_ui_shadcn__23 from "@repo-ui/shadcn/pagination"
-import type * as _repo_ui_shadcn__24 from "@repo-ui/shadcn/popover"
-import type * as _repo_ui_shadcn__25 from "@repo-ui/shadcn/progress"
-import type * as _repo_ui_shadcn__26 from "@repo-ui/shadcn/radio-group"
-import type * as _repo_ui_shadcn__27 from "@repo-ui/shadcn/resizable"
-import type * as _repo_ui_shadcn__28 from "@repo-ui/shadcn/scroll-area"
-import type * as _repo_ui_shadcn__29 from "@repo-ui/shadcn/select"
-import type * as _repo_ui_shadcn__30 from "@repo-ui/shadcn/separator"
-import type * as _repo_ui_shadcn__31 from "@repo-ui/shadcn/sheet"
-import type * as _repo_ui_shadcn__32 from "@repo-ui/shadcn/skeleton"
-import type * as _repo_ui_shadcn__33 from "@repo-ui/shadcn/slider"
-import type * as _repo_ui_shadcn__34 from "@repo-ui/shadcn/sonner"
-import type * as _repo_ui_shadcn__35 from "@repo-ui/shadcn/switch"
-import type * as _repo_ui_shadcn__36 from "@repo-ui/shadcn/table"
-import type * as _repo_ui_shadcn__37 from "@repo-ui/shadcn/tabs"
-import type * as _repo_ui_shadcn__38 from "@repo-ui/shadcn/textarea"
-import type * as _repo_ui_shadcn__39 from "@repo-ui/shadcn/toast"
-import type * as _repo_ui_shadcn__40 from "@repo-ui/shadcn/toatser"
-import type * as _repo_ui_shadcn__41 from "@repo-ui/shadcn/toggle-group"
-import type * as _repo_ui_shadcn__42 from "@repo-ui/shadcn/toggle"
-import type * as _repo_ui_shadcn__43 from "@repo-ui/shadcn/tooltip"
-import type * as _repo_ui_shadcn__44 from "@repo-ui/shadcn/use-toast"
 
 
 // @repo-ui/radix
@@ -126,6 +74,54 @@ import type * as _repo_ui_radix__43 from "@repo-ui/radix/tooltip"
 import type * as _repo_ui_radix__44 from "@repo-ui/radix/use-toast"
 
 
+// @repo-ui/shadcn
+import type * as _repo_ui_shadcn__0 from "@repo-ui/shadcn/accordion"
+import type * as _repo_ui_shadcn__1 from "@repo-ui/shadcn/alert-dialog"
+import type * as _repo_ui_shadcn__2 from "@repo-ui/shadcn/alert"
+import type * as _repo_ui_shadcn__3 from "@repo-ui/shadcn/aspect-ratio"
+import type * as _repo_ui_shadcn__4 from "@repo-ui/shadcn/avatar"
+import type * as _repo_ui_shadcn__5 from "@repo-ui/shadcn/badge"
+import type * as _repo_ui_shadcn__6 from "@repo-ui/shadcn/button"
+import type * as _repo_ui_shadcn__7 from "@repo-ui/shadcn/calendar"
+import type * as _repo_ui_shadcn__8 from "@repo-ui/shadcn/card"
+import type * as _repo_ui_shadcn__9 from "@repo-ui/shadcn/carousel"
+import type * as _repo_ui_shadcn__10 from "@repo-ui/shadcn/checkbox"
+import type * as _repo_ui_shadcn__11 from "@repo-ui/shadcn/collapsible"
+import type * as _repo_ui_shadcn__12 from "@repo-ui/shadcn/command"
+import type * as _repo_ui_shadcn__13 from "@repo-ui/shadcn/context-menu"
+import type * as _repo_ui_shadcn__14 from "@repo-ui/shadcn/dialog"
+import type * as _repo_ui_shadcn__15 from "@repo-ui/shadcn/drawer"
+import type * as _repo_ui_shadcn__16 from "@repo-ui/shadcn/dropdown-menu"
+import type * as _repo_ui_shadcn__17 from "@repo-ui/shadcn/form"
+import type * as _repo_ui_shadcn__18 from "@repo-ui/shadcn/hover-card"
+import type * as _repo_ui_shadcn__19 from "@repo-ui/shadcn/input"
+import type * as _repo_ui_shadcn__20 from "@repo-ui/shadcn/label"
+import type * as _repo_ui_shadcn__21 from "@repo-ui/shadcn/menubar"
+import type * as _repo_ui_shadcn__22 from "@repo-ui/shadcn/navigation-menu"
+import type * as _repo_ui_shadcn__23 from "@repo-ui/shadcn/pagination"
+import type * as _repo_ui_shadcn__24 from "@repo-ui/shadcn/popover"
+import type * as _repo_ui_shadcn__25 from "@repo-ui/shadcn/progress"
+import type * as _repo_ui_shadcn__26 from "@repo-ui/shadcn/radio-group"
+import type * as _repo_ui_shadcn__27 from "@repo-ui/shadcn/resizable"
+import type * as _repo_ui_shadcn__28 from "@repo-ui/shadcn/scroll-area"
+import type * as _repo_ui_shadcn__29 from "@repo-ui/shadcn/select"
+import type * as _repo_ui_shadcn__30 from "@repo-ui/shadcn/separator"
+import type * as _repo_ui_shadcn__31 from "@repo-ui/shadcn/sheet"
+import type * as _repo_ui_shadcn__32 from "@repo-ui/shadcn/skeleton"
+import type * as _repo_ui_shadcn__33 from "@repo-ui/shadcn/slider"
+import type * as _repo_ui_shadcn__34 from "@repo-ui/shadcn/sonner"
+import type * as _repo_ui_shadcn__35 from "@repo-ui/shadcn/switch"
+import type * as _repo_ui_shadcn__36 from "@repo-ui/shadcn/table"
+import type * as _repo_ui_shadcn__37 from "@repo-ui/shadcn/tabs"
+import type * as _repo_ui_shadcn__38 from "@repo-ui/shadcn/textarea"
+import type * as _repo_ui_shadcn__39 from "@repo-ui/shadcn/toast"
+import type * as _repo_ui_shadcn__40 from "@repo-ui/shadcn/toatser"
+import type * as _repo_ui_shadcn__41 from "@repo-ui/shadcn/toggle-group"
+import type * as _repo_ui_shadcn__42 from "@repo-ui/shadcn/toggle"
+import type * as _repo_ui_shadcn__43 from "@repo-ui/shadcn/tooltip"
+import type * as _repo_ui_shadcn__44 from "@repo-ui/shadcn/use-toast"
+
+
 // @repo/app-vars
 import type * as _repo_app_vars__0 from "@repo/app-vars"
 import type * as _repo_app_vars__1 from "@repo/app-vars/init"
@@ -157,6 +153,10 @@ import type * as _repo_next_utils__7 from "@repo/next-utils/search-params/@clien
 // @repo/react-utils
 import type * as _repo_react_utils__0 from "@repo/react-utils/@client/hooks/use-unmount"
 import type * as _repo_react_utils__1 from "@repo/react-utils/@client/hooks/use-debounce"
+
+
+// @repo/shared-icons
+import type * as _repo_shared_icons__0 from "@repo/shared-icons"
 
 
 // @repo/ts-env
